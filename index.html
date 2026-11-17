@@ -1,0 +1,118 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MEGA SNAKE | Ultimate Arcade</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --green:#00ff99;
+ --dark:#060b13;
+ --panel:#101a28;
+ --text:#eafff5;
+ --muted:#8da69e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ background:var(--dark);
+ color:var(--text);
+ font-family:'Rajdhani',sans-serif;
+ min-height:100vh;
+}
+header{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ padding:18px 7%;
+ background:#0c1521;
+ border-bottom:1px solid #1b4939;
+ position:sticky;
+ top:0;
+ z-index:10;
+}
+.logo{
+ font:900 24px Orbitron;
+ color:var(--green);
+ letter-spacing:2px;
+}
+.logo span{color:white}
+nav{display:flex;gap:25px}
+nav a{
+ color:#c3d5ce;
+ text-decoration:none;
+ font-size:17px;
+}
+nav a:hover{color:var(--green)}
+.hero{
+ padding:48px 20px 25px;
+ text-align:center;
+}
+.tag{
+ color:var(--green);
+ letter-spacing:4px;
+ font-weight:bold;
+}
+.hero h1{
+ font:900 clamp(35px,7vw,65px) Orbitron;
+ margin:15px 0;
+ text-shadow:0 0 25px #00ff9970;
+}
+.hero h1 span{color:var(--green)}
+.hero p{color:var(--muted);font-size:19px}
+.container{
+ width:92%;
+ max-width:1050px;
+ margin:20px auto 50px;
+}
+.game-layout{
+ display:grid;
+ grid-template-columns:1fr 260px;
+ gap:20px;
+}
+.game-box,.side-box{
+ background:var(--panel);
+ border:1px solid #244637;
+ border-radius:16px;
+ padding:18px;
+}
+.stats{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:10px;
+ margin-bottom:15px;
+}
+.stat{
+ background:#08131c;
+ padding:12px 5px;
+ border-radius:9px;
+ text-align:center;
+}
+.stat span{
+ display:block;
+ color:var(--green);
+ font:700 22px Orbitron;
+}
+.stat small{
+ color:var(--muted);
+ font-size:13px;
+}
+canvas{
+ width:100%;
+ max-width:500px;
+ aspect-ratio:1;
+ display:block;
+ margin:auto;
+ background:#050d15;
+ border:2px solid var(--green);
+ border-radius:10px;
+ box-shadow:0 0 20px #00ff9920;
+ touch-action:none;
+}
+.actions{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap
